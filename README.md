@@ -1,0 +1,1 @@
+# dependencies-injector-fastapi-example
