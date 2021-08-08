@@ -1,0 +1,7 @@
+uvicorn
+fastapi
+sqlalchemy
+pyyaml
+dependency-injector
+grpclib==0.3.1
+psycopg2
