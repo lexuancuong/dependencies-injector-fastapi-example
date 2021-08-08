@@ -13,9 +13,11 @@ class Container(containers.DeclarativeContainer):
 
     config = providers.Configuration()
 
+    # The gem of dependency injector :)
+    # Singleton Strict
     db = providers.Singleton(Database, db_url=DATABASE_URL)
 
-    user_repository = providers.Singleton(
+    user_repository = providers.Factory(
         UserRepository,
         session_factory=db.provided.session,
     )
@@ -24,3 +26,7 @@ class Container(containers.DeclarativeContainer):
         UserService,
         user_repository=user_repository,
     )
+
+# the container class help all components obey to dependency injection principle
+# `All entities just depend on abstract class`
+

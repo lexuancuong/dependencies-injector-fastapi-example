@@ -1,4 +1,4 @@
-# dependencies-injector-fastapi-example
+# fastapi sqlalchemy + dependencies injector - example app
 An example of how to use dependencies injector for fastapi sqlalchemy app.
 
 Run all of code by this line:
